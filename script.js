@@ -48,4 +48,6 @@ console.log(week[lang]);
 
 
 const namePerson = prompt("Введите имя");
-namePerson == 'Артем' ? console.log('директор') : namePerson == 'Александр' ? console.log('преподаватель') : console.log('студент');
+namePerson === 'Артем' ? console.log('директор') 
+              : namePerson == 'Александр' ? console.log('преподаватель') 
+              : console.log('студент');
