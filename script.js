@@ -1,53 +1,13 @@
-const lang = prompt("Выберите язык: ru или en");
-if (lang == "ru") {
-  console.log(
-    "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье"
-  );
-} else if (lang == "en") {
-  console.log("Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
-} else {
-  console.log("Выбран неверный язык");
-}
+const string = "     12345678911234567892123456789312345   ";
 
-switch (lang) {
-  case "ru":
-    console.log(
-      "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье"
-    );
-    break;
-  case "en":
-    console.log(
-      "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
-    );
-    break;
-  default:
-    console.log("Выбран неверный язык");
-}
-
-const week = {
-  ru: [
-    "Понедельник",
-    "Вторник",
-    "Среда",
-    "Четверг",
-    "Пятница",
-    "Суббота",
-    "Воскресенье",
-  ],
-  en: [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ],
+const spaceRemove = function (string) {
+  if (typeof string !== "string") {
+    console.log("Передана не строка, передайте строку");
+  } else if (string.trim().length > 30) {
+    console.log(string.trim().slice(0, 30) + "...");
+  } else {
+    console.log(string.trim().slice(0, 30) + "...");
+  }
 };
-console.log(week[lang]);
 
-
-const namePerson = prompt("Введите имя");
-namePerson === 'Артем' ? console.log('директор') 
-              : namePerson == 'Александр' ? console.log('преподаватель') 
-              : console.log('студент');
+spaceRemove(string);
