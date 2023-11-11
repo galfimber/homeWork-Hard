@@ -1,13 +1,12 @@
 const string = "     12345678911234567892123456789312345   ";
 
 const spaceRemove = function (string) {
+  const res = string.trim();
   if (typeof string !== "string") {
-    console.log("Передана не строка, передайте строку");
-  } else if (string.trim().length > 30) {
-    console.log(string.trim().slice(0, 30) + "...");
-  } else {
-    console.log(string.trim().slice(0, 30) + "...");
+    return "Передана не строка, передайте строку";
+  } else if (res.length > 30) {
+    return res.slice(0, 30) + "...";
   }
 };
 
-spaceRemove(string);
+console.log(spaceRemove(string));
