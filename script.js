@@ -13,7 +13,7 @@ const parent = document.querySelector(".text");
 
 function text() {
   for (let key of week) {
-    const item = document.createElement("p");
+    const item = document.createElement("li");
     if (key === week[today]) {
       item.style.fontWeight = "Bold";
     }
